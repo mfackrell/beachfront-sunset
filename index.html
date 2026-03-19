@@ -508,7 +508,7 @@
           <div class="md:col-span-2 flex flex-col sm:flex-row gap-4 mt-2">
             <button
               type="submit"
-              class="btn-gold text-white px-10 py-4 font-bold uppercase tracking-[0.2em] text-xs"
+              class="btn-gold text-white px-10 py-4 font-bold uppercase tracking-[0.2em] text-xs disabled:opacity-70 disabled:cursor-not-allowed"
             >
               Request Review
             </button>
@@ -519,6 +519,8 @@
               View Sample Report
             </a>
           </div>
+
+          <p id="auditStatus" class="md:col-span-2 hidden text-sm text-amber-200"></p>
         </form>
       </div>
 
@@ -563,20 +565,51 @@
     const auditForm = document.getElementById("auditForm");
     const formWrapper = document.getElementById("auditFormWrapper");
     const successMessage = document.getElementById("auditSuccess");
+    const auditStatus = document.getElementById("auditStatus");
 
     if (auditForm) {
-      auditForm.addEventListener("submit", (e) => {
+      auditForm.addEventListener("submit", async (e) => {
         e.preventDefault();
-        // Mimic API delay
+
         const btn = auditForm.querySelector('button[type="submit"]');
+        const originalText = btn.innerText;
+        const formData = new FormData(auditForm);
+        const payload = {
+          fullName: formData.get("fullName")?.toString().trim(),
+          email: formData.get("email")?.toString().trim(),
+          property: formData.get("property")?.toString().trim(),
+          revenueRange: formData.get("revenueRange")?.toString().trim(),
+        };
+
+        auditStatus.classList.add("hidden");
+        auditStatus.textContent = "";
         btn.innerText = "Sending...";
         btn.disabled = true;
-        
-        setTimeout(() => {
+
+        try {
+          const response = await fetch("/api/audit-request", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const result = await response.json();
+
+          if (!response.ok || !result.ok) {
+            throw new Error(result.error || "Something went wrong. Please try again.");
+          }
+
           formWrapper.classList.add("hidden");
           successMessage.classList.remove("hidden");
           successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 800);
+        } catch (error) {
+          auditStatus.textContent = error.message || "Something went wrong. Please try again.";
+          auditStatus.classList.remove("hidden");
+          btn.innerText = originalText;
+          btn.disabled = false;
+        }
       });
     }
 
