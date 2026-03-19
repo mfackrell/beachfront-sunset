@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeachFront Sunset STR | Boutique Asset Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --navy: #0F172A; --gold: #C5A059; }
+        body { font-family: 'Inter', sans-serif; background-color: #FAFAFA; color: #1A1A1A; scroll-behavior: smooth; }
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        .hero-gradient { 
+            background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=2000'); 
+            background-size: cover; 
+            background-position: center; 
+        }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .btn-gold { background: var(--gold); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2); }
+        .section-padding { padding: 120px 0; }
+        .letter-spacing-widest { letter-spacing: 0.2em; }
+        /* Prevent horizontal scroll on AOS animations */
+        html, body { overflow-x: hidden; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-6 md:px-10 py-6 flex justify-between items-center mix-blend-difference text-white">
+        <div class="text-xs font-bold uppercase tracking-[0.3em]">BeachFront Sunset STR</div>
+        <div class="hidden md:flex space-x-12 text-[10px] uppercase tracking-widest font-semibold">
+            <a href="#approach" class="hover:text-gray-400 transition">The Method</a>
+            <a href="#economics" class="hover:text-gray-400 transition">Economics</a>
+            <a href="#reporting" class="hover:text-gray-400 transition">CFO Reporting</a>
+            <a href="#audit" class="border-b border-white pb-1 hover:border-gray-400 transition">Performance Review</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen hero-gradient flex items-center justify-center text-center text-white px-6">
+        <div class="max-w-5xl" data-aos="fade-up" data-aos-duration="1500">
+            <span class="text-xs uppercase tracking-[0.5em] mb-8 block text-gray-300">Emerald Coast, Florida</span>
+            <h1 class="text-5xl md:text-8xl mb-8 leading-tight">Performance. Hospitality. Predictability.</h1>
+            <p class="text-xl md:text-2xl font-light text-gray-200 max-w-3xl mx-auto mb-12 leading-relaxed">
+                A boutique model designed for premium assets. We intentionally cap our portfolio to protect service quality and financial performance.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-12 mt-20 border-t border-white/20 pt-12">
+                <div>
+                    <div class="text-4xl serif mb-1">≤ 20</div>
+                    <div class="text-[10px] uppercase tracking-widest text-gray-400">Portfolio Cap</div>
+                </div>
+                <div class="w-px h-12 bg-white/20 hidden md:block"></div>
+                <div>
+                    <div class="text-4xl serif mb-1">$200K+</div>
+                    <div class="text-[10px] uppercase tracking-widest text-gray-400">Target Annual Revenue</div>
+                </div>
+                <div class="w-px h-12 bg-white/20 hidden md:block"></div>
+                <div>
+                    <div class="text-4xl serif mb-1">25%</div>
+                    <div class="text-[10px] uppercase tracking-widest text-gray-400">Performance Fee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Market Gap -->
+    <section class="bg-[#0A0A0A] text-white section-padding px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-24 items-center">
+                <div data-aos="fade-right">
+                    <span class="text-[10px] uppercase tracking-[0.4em] text-gray-500 mb-6 block">The Market Gap</span>
+                    <h2 class="text-4xl md:text-5xl mb-8 leading-snug">Why owners leave high-volume management firms.</h2>
+                    <p class="text-gray-400 text-lg font-light leading-relaxed mb-12">
+                        At scale, the traditional business model optimizes for portfolio size—not performance per property. Owners become numbers; assets become checklists.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 gap-12" data-aos="fade-left">
+                    <div class="border-l border-white/10 pl-8 py-4">
+                        <h4 class="text-xs uppercase tracking-widest mb-3 text-white">Automated Pricing</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Algorithms fill nights, but often miss yield. Owners get occupancy—not maximized revenue.</p>
+                    </div>
+                    <div class="border-l border-white/10 pl-8 py-4">
+                        <h4 class="text-xs uppercase tracking-widest mb-3 text-white">Operational Drift</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Turnovers become checklists. Small issues compound into guest complaints and asset wear.</p>
+                    </div>
+                    <div class="border-l border-white/10 pl-8 py-4">
+                        <h4 class="text-xs uppercase tracking-widest mb-3 text-white">Low-Signal Reporting</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed">Statements show payouts, not performance. No context, benchmarks, or strategy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Method -->
+    <section id="approach" class="section-padding px-6 bg-white">
+        <div class="max-w-6xl mx-auto text-center mb-24" data-aos="fade-up">
+            <span class="text-[10px] uppercase tracking-[0.4em] text-gray-400 mb-6 block">The Operating System</span>
+            <h2 class="text-5xl md:text-6xl mb-6">A finance-and-operations mindset.</h2>
+            <p class="text-gray-500 text-xl font-light max-w-2xl mx-auto italic">"We don’t scale by adding homes. We scale by making owners successful."</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="p-10 border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-2xl transition duration-500 group" data-aos="fade-up" data-aos-delay="100">
+                <div class="text-2xl serif mb-6 group-hover:text-[#C5A059] transition">Revenue Yield</div>
+                <p class="text-sm text-gray-500 leading-relaxed italic">Dynamic pricing, channel mix, and conversion improvements to maximize yield.</p>
+            </div>
+            <div class="p-10 border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-2xl transition duration-500 group" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-2xl serif mb-6 group-hover:text-[#C5A059] transition">Repeat Guest Engine</div>
+                <p class="text-sm text-gray-500 leading-relaxed italic">Turn platform guests into loyal repeat guests who book direct over time.</p>
+            </div>
+            <div class="p-10 border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-2xl transition duration-500 group" data-aos="fade-up" data-aos-delay="300">
+                <div class="text-2xl serif mb-6 group-hover:text-[#C5A059] transition">Hospitality Standards</div>
+                <p class="text-sm text-gray-500 leading-relaxed italic">Arrival touches, elite cleaning, and five-star experiences engineered for reviews.</p>
+            </div>
+            <div class="p-10 border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-2xl transition duration-500 group" data-aos="fade-up" data-aos-delay="400">
+                <div class="text-2xl serif mb-6 group-hover:text-[#C5A059] transition">CFO-Grade Insight</div>
+                <p class="text-sm text-gray-500 leading-relaxed italic">Inspections, preventive maintenance, and performance reporting owners can trust.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Economics -->
+    <section id="economics" class="py-32 px-6 bg-[#F4F4F4]">
+        <div class="max-w-4xl mx-auto bg-white p-8 md:p-16 shadow-sm border border-gray-200" data-aos="zoom-in">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl serif mb-4">The Mathematics of Net Income</h3>
+                <p class="text-gray-400 text-sm uppercase tracking-widest">Evaluate the switch based on net income, not fee percentage.</p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="flex justify-between items-end border-b pb-4">
+                    <span class="text-gray-400 text-sm italic">Standard Management Net (20% Fee)</span>
+                    <span class="text-2xl serif text-gray-400">$160,000</span>
+                </div>
+                <div class="flex justify-between items-end border-b border-black pb-4">
+                    <span class="text-black font-bold text-sm uppercase tracking-widest">BeachFront Sunset Net (25% Fee + 15% Lift)</span>
+                    <span class="text-3xl md:text-4xl serif text-black">$172,500</span>
+                </div>
+                <div class="bg-blue-50 p-6 rounded text-center">
+                    <p class="text-blue-900 font-semibold text-lg">+$12,500 Net Gain</p>
+                    <p class="text-xs text-blue-700 mt-1 uppercase tracking-widest">Annualized per property</p>
+                </div>
+                <p class="text-[10px] text-center text-gray-400 mt-8 italic">Break-even lift ≈ 6.7%. If we lift revenue by more than ~7%, the owner comes out ahead on net income regardless of management fee.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reporting -->
+    <section id="reporting" class="section-padding px-6 bg-white overflow-hidden">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-24 items-center">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <span class="text-[10px] uppercase tracking-[0.4em] text-gray-400 mb-6 block">Asset Management</span>
+                <h2 class="text-5xl serif mb-8 leading-tight">CFO-grade transparency. No mystery statements.</h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start space-x-4">
+                        <span class="text-[#C5A059] mt-1 text-xl leading-none">●</span>
+                        <div>
+                            <span class="block font-bold text-xs uppercase tracking-widest mb-1">Yield Rationale</span>
+                            <span class="text-sm text-gray-500">Every pricing action explained. We manage rate curves, not just calendar gaps.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-4">
+                        <span class="text-[#C5A059] mt-1 text-xl leading-none">●</span>
+                        <div>
+                            <span class="block font-bold text-xs uppercase tracking-widest mb-1">Operational Intelligence</span>
+                            <span class="text-sm text-gray-500">Maintenance logs, vendor SLAs, and guest feedback themes presented with an action plan.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:w-1/2 relative" data-aos="fade-left">
+                <div class="bg-slate-900 rounded-2xl p-8 md:p-12 shadow-2xl text-white transform md:rotate-2 hover:rotate-0 transition duration-700">
+                    <div class="flex justify-between border-b border-white/10 pb-4 mb-8">
+                        <span class="text-[10px] uppercase font-bold tracking-widest">Monthly Performance Report</span>
+                        <span class="text-[10px] text-gray-500">MARCH 2026</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 mb-10">
+                        <div>
+                            <div class="text-[10px] text-gray-500 uppercase mb-2">Monthly RevPAR</div>
+                            <div class="text-3xl serif">$412.50</div>
+                            <div class="text-[10px] text-green-400 mt-1">+14% vs Market</div>
+                        </div>
+                        <div>
+                            <div class="text-[10px] text-gray-500 uppercase mb-2">Net ADR</div>
+                            <div class="text-3xl serif">$645.00</div>
+                            <div class="text-[10px] text-green-400 mt-1">+8% vs Prev Year</div>
+                        </div>
+                    </div>
+                    <div class="pt-8 border-t border-white/10">
+                        <div class="text-[10px] uppercase text-gray-500 mb-4 tracking-widest">Channel Mix Efficiency</div>
+                        <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden mb-2">
+                            <div class="bg-[#C5A059] h-full w-[42%]"></div>
+                        </div>
+                        <div class="flex justify-between text-[9px] uppercase tracking-widest font-bold">
+                            <span class="text-[#C5A059]">Direct Bookings (42%)</span>
+                            <span class="text-gray-500">OTA (58%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scorecard/Audit -->
+    <section id="audit" class="bg-[#F4F4F4] py-32 px-6 text-center">
+        <div class="max-w-3xl mx-auto" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl serif mb-10">Is your home performing to its potential?</h2>
+            <p class="text-gray-500 text-lg mb-12 font-light leading-relaxed">
+                We provide a Property Performance Review—a diagnostic that shows where money is being left on the table. Benchmarks, objective diagnosis, and an actionable plan.
+            </p>
+            <div id="auditFormWrapper">
+                <form id="auditForm" class="flex flex-col md:flex-row justify-center gap-4">
+                    <input type="text" placeholder="Property Address or URL" required class="px-8 py-4 bg-white border border-gray-200 focus:outline-none w-full md:w-96 focus:border-[#C5A059] transition">
+                    <button type="submit" class="btn-gold text-white px-10 py-4 font-bold uppercase tracking-[0.2em] text-xs">Request Scorecard</button>
+                </form>
+            </div>
+            <div id="auditSuccess" class="hidden">
+                <div class="bg-white p-10 shadow-sm inline-block rounded-xl border border-gray-200">
+                    <div class="text-4xl mb-4">🥂</div>
+                    <h4 class="text-xl serif font-bold mb-2">Audit Requested</h4>
+                    <p class="text-sm text-gray-500">We will analyze your listing data and send your scorecard shortly.</p>
+                </div>
+            </div>
+            <p class="mt-8 text-[10px] uppercase tracking-widest text-gray-400">Exclusively for properties with $200K+ annual potential.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-16 px-10 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.3em] text-gray-400">
+        <div class="mb-4 md:mb-0">© 2026 BeachFront Sunset STR, LLC</div>
+        <div class="flex space-x-8">
+            <a href="#" class="hover:text-black transition">Privacy</a>
+            <a href="#" class="hover:text-black transition">Terms</a>
+            <span class="hidden md:inline">Boutique Asset Management | Emerald Coast, FL</span>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            once: true,
+            duration: 1000
+        });
+
+        // Form Logic
+        const auditForm = document.getElementById('auditForm');
+        const formWrapper = document.getElementById('auditFormWrapper');
+        const successMessage = document.getElementById('auditSuccess');
+
+        auditForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formWrapper.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
